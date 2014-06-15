@@ -40,7 +40,7 @@
     _adjustsCornerRadiusBasedOnFrame = YES;
     _cornerRadiusRatioToSmallestSide = 1.0/6.0;
     [self adjustCornerRadius];
-    
+        
     self.layer.cornerRadius = _cornerRadius;
     self.layer.borderWidth = 1.0;
     self.layer.borderColor = self.tintColor.CGColor;
@@ -53,6 +53,12 @@
     }
 }
 
+-(void) tintColorDidChange {
+    [super tintColorDidChange];
+    [self setTitleColor:self.tintColor forState:UIControlStateNormal];
+    [self updateBorderAndFill];
+}
+
 -(void) adjustCornerRadius {
     _cornerRadius = roundf(MIN(CGRectGetHeight(self.frame), CGRectGetWidth(self.frame)) * self.cornerRadiusRatioToSmallestSide);
     self.layer.cornerRadius = _cornerRadius;
@@ -60,11 +66,12 @@
 
 -(void) setTitleColor:(UIColor *)color forState:(UIControlState)state {
     
-    if ([self titleColorForState:state] == color) {
+    if ([[self titleColorForState:state] isEqual:color]) {
         return;
     }
     
     [super setTitleColor:color forState:state];
+    
     if (state == UIControlStateNormal) {
         self.tintColor = color;
     }
@@ -74,7 +81,7 @@
 
 -(void) setTintColor:(UIColor *)tintColor {
     
-    if ([self tintColor] == tintColor) {
+    if ([[self tintColor] isEqual:tintColor]) {
         return;
     }
     
@@ -109,8 +116,6 @@
     
     [super setHighlighted:highlighted];
     
-    self.titleLabel.alpha = 1.0;
-
     [UIView animateWithDuration:0.2f
                           delay:0.0f
                         options:UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionBeginFromCurrentState

@@ -15,7 +15,6 @@
 		C8197760194A00D5000DAE85 /* RDMBorderedButtonAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C819775F194A00D5000DAE85 /* RDMBorderedButtonAppDelegate.m */; };
 		C8197763194A00D5000DAE85 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8197761194A00D5000DAE85 /* Main_iPhone.storyboard */; };
 		C8197766194A00D5000DAE85 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8197764194A00D5000DAE85 /* Main_iPad.storyboard */; };
-		C8197769194A00D5000DAE85 /* RDMBorderedButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8197768194A00D5000DAE85 /* RDMBorderedButtonViewController.m */; };
 		C819776B194A00D5000DAE85 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C819776A194A00D5000DAE85 /* Images.xcassets */; };
 		C8197772194A00D5000DAE85 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8197771194A00D5000DAE85 /* XCTest.framework */; };
 		C8197773194A00D5000DAE85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C819774F194A00D5000DAE85 /* Foundation.framework */; };
@@ -23,6 +22,8 @@
 		C819777C194A00D5000DAE85 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C819777A194A00D5000DAE85 /* InfoPlist.strings */; };
 		C819777E194A00D5000DAE85 /* RDMBorderedButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C819777D194A00D5000DAE85 /* RDMBorderedButtonTests.m */; };
 		C8197789194A020D000DAE85 /* RDMBorderedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C8197788194A020D000DAE85 /* RDMBorderedButton.m */; };
+		C892D5AA194D184C0018CA96 /* RDMInterfaceBuilderExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C892D5A9194D184C0018CA96 /* RDMInterfaceBuilderExampleViewController.m */; };
+		C892D5AD194D18850018CA96 /* RDMProgramaticViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C892D5AC194D18850018CA96 /* RDMProgramaticViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +49,6 @@
 		C819775F194A00D5000DAE85 /* RDMBorderedButtonAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RDMBorderedButtonAppDelegate.m; sourceTree = "<group>"; };
 		C8197762194A00D5000DAE85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		C8197765194A00D5000DAE85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		C8197767194A00D5000DAE85 /* RDMBorderedButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDMBorderedButtonViewController.h; sourceTree = "<group>"; };
-		C8197768194A00D5000DAE85 /* RDMBorderedButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RDMBorderedButtonViewController.m; sourceTree = "<group>"; };
 		C819776A194A00D5000DAE85 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C8197770194A00D5000DAE85 /* RDMBorderedButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RDMBorderedButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8197771194A00D5000DAE85 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -58,6 +57,10 @@
 		C819777D194A00D5000DAE85 /* RDMBorderedButtonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RDMBorderedButtonTests.m; sourceTree = "<group>"; };
 		C8197787194A020D000DAE85 /* RDMBorderedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDMBorderedButton.h; sourceTree = "<group>"; };
 		C8197788194A020D000DAE85 /* RDMBorderedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDMBorderedButton.m; sourceTree = "<group>"; };
+		C892D5A8194D184C0018CA96 /* RDMInterfaceBuilderExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDMInterfaceBuilderExampleViewController.h; sourceTree = "<group>"; };
+		C892D5A9194D184C0018CA96 /* RDMInterfaceBuilderExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDMInterfaceBuilderExampleViewController.m; sourceTree = "<group>"; };
+		C892D5AB194D18850018CA96 /* RDMProgramaticViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDMProgramaticViewController.h; sourceTree = "<group>"; };
+		C892D5AC194D18850018CA96 /* RDMProgramaticViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDMProgramaticViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,15 +120,9 @@
 		C8197755194A00D5000DAE85 /* RDMBorderedButton */ = {
 			isa = PBXGroup;
 			children = (
-				C819775E194A00D5000DAE85 /* RDMBorderedButtonAppDelegate.h */,
-				C819775F194A00D5000DAE85 /* RDMBorderedButtonAppDelegate.m */,
-				C8197761194A00D5000DAE85 /* Main_iPhone.storyboard */,
-				C8197764194A00D5000DAE85 /* Main_iPad.storyboard */,
-				C8197767194A00D5000DAE85 /* RDMBorderedButtonViewController.h */,
-				C8197768194A00D5000DAE85 /* RDMBorderedButtonViewController.m */,
-				C8197787194A020D000DAE85 /* RDMBorderedButton.h */,
-				C8197788194A020D000DAE85 /* RDMBorderedButton.m */,
 				C819776A194A00D5000DAE85 /* Images.xcassets */,
+				C892D5A7194D17580018CA96 /* Source */,
+				C892D5A6194D15060018CA96 /* Example */,
 				C8197756194A00D5000DAE85 /* Supporting Files */,
 			);
 			path = RDMBorderedButton;
@@ -158,6 +155,30 @@
 				C819777A194A00D5000DAE85 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C892D5A6194D15060018CA96 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				C819775E194A00D5000DAE85 /* RDMBorderedButtonAppDelegate.h */,
+				C819775F194A00D5000DAE85 /* RDMBorderedButtonAppDelegate.m */,
+				C8197761194A00D5000DAE85 /* Main_iPhone.storyboard */,
+				C8197764194A00D5000DAE85 /* Main_iPad.storyboard */,
+				C892D5A8194D184C0018CA96 /* RDMInterfaceBuilderExampleViewController.h */,
+				C892D5A9194D184C0018CA96 /* RDMInterfaceBuilderExampleViewController.m */,
+				C892D5AB194D18850018CA96 /* RDMProgramaticViewController.h */,
+				C892D5AC194D18850018CA96 /* RDMProgramaticViewController.m */,
+			);
+			name = Example;
+			sourceTree = "<group>";
+		};
+		C892D5A7194D17580018CA96 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C8197787194A020D000DAE85 /* RDMBorderedButton.h */,
+				C8197788194A020D000DAE85 /* RDMBorderedButton.m */,
+			);
+			name = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,9 +281,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8197789194A020D000DAE85 /* RDMBorderedButton.m in Sources */,
-				C8197769194A00D5000DAE85 /* RDMBorderedButtonViewController.m in Sources */,
 				C819775C194A00D5000DAE85 /* main.m in Sources */,
+				C892D5AD194D18850018CA96 /* RDMProgramaticViewController.m in Sources */,
 				C8197760194A00D5000DAE85 /* RDMBorderedButtonAppDelegate.m in Sources */,
+				C892D5AA194D184C0018CA96 /* RDMInterfaceBuilderExampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +499,7 @@
 				C8197783194A00D5000DAE85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C8197784194A00D5000DAE85 /* Build configuration list for PBXNativeTarget "RDMBorderedButtonTests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +508,7 @@
 				C8197786194A00D5000DAE85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
