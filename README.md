@@ -16,14 +16,17 @@ By default, RDMBorderedButton will adjusts the corner radius of its border based
 
 	button.adjustsCornerRadiusBasedOnFrame = NO; //Default is YES
 	
-You can also change the ratio of the corner radius off this automatic adjustment:
+You can also change the ratio of the corner radius of this automatic adjustment:
 
 	button.cornerRadiusRatioToSmallestSide = 1.0/4.0; //Default is 1.0/6.0
 	
+Note that changes to Corner Radius will not be animated. If you would like a corner radius change to be animated you will need to animate the key path using CoreAnimation. See the programatic view controller in the example project to see an example of this.
+
 The corner radius can be adjusted manually (this turns off automatic adjustments):
 
-	button.cornerRadius = 6.0;
-	
+	//This will forward the cornerRadius to the button's layer and turn off automatic adjustments
+	button.cornerRadius = 6.0; 
+
 ###Color
 
 The text and border color are adjusted together. For normal state they can be changed using either:
