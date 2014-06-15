@@ -26,6 +26,9 @@
 -(id) initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
+        
+        NSAssert(self.buttonType == UIButtonTypeCustom, @"RDMBorderedButton's created in interface builder must be set to type custom.");
+        
         [self commonSetup];
     }
     return self;
