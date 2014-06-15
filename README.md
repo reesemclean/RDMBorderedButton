@@ -2,6 +2,8 @@
 
 A subclass of UIButton that adds a border.
 
+![RDMBorderedButton Screenshot](https://raw.githubusercontent.com/reesemclean/RDMBorderedButton/master/screenshot.png "RDMBorderedButton Screenshot")
+
 ##Usage
 
 In code: Use initWithFrame to create a button and add to a subview.
