@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+    </dependencies>
+    <scenes>
+        <!--First View Controller - Interface Builder-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="RDMBorderedButton" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQr-d4-Ar2">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="44"/>
+                                <items/>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIk-2d-SsO" customClass="BorderedButton" customModule="RDMBorderedButton" customModuleProvider="target">
+                                <rect key="frame" x="130" y="60" width="220" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="dKI-wL-ibh"/>
+                                    <constraint firstAttribute="height" constant="74" id="nTQ-Tf-MeQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Big Blue Button">
+                                    <color key="titleColor" red="0.0" green="0.57647061349999995" blue="0.81960785390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PoS-mc-yHE" customClass="BorderedButton" customModule="RDMBorderedButton" customModuleProvider="target">
+                                <rect key="frame" x="130" y="224" width="220" height="74"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Disable Red">
+                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="disableRedButtonPushed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="iVp-gF-1rk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Un0-uJ-Kye" customClass="BorderedButton" customModule="RDMBorderedButton" customModuleProvider="target">
+                                <rect key="frame" x="130" y="142" width="95" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Red">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGV-m3-SBW" customClass="BorderedButton" customModule="RDMBorderedButton" customModuleProvider="target">
+                                <rect key="frame" x="255" y="142" width="95" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Green">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mij-F6-tQ3" customClass="BorderedButton" customModule="RDMBorderedButton" customModuleProvider="target">
+                                <rect key="frame" x="130" y="183" width="95" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Black">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZI-h9-1Ys" customClass="BorderedButton" customModule="RDMBorderedButton" customModuleProvider="target">
+                                <rect key="frame" x="255" y="183" width="95" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Yellow">
+                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxI-jd-OVb" customClass="BorderedButton" customModule="RDMBorderedButton" customModuleProvider="target">
+                                <rect key="frame" x="130" y="306" width="220" height="74"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="tintColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Show Alert">
+                                    <color key="titleColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlertButtonPushed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="cAr-pU-Zom"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AxI-jd-OVb" firstAttribute="leading" secondItem="PoS-mc-yHE" secondAttribute="leading" id="4Yp-bD-9SY"/>
+                            <constraint firstItem="PoS-mc-yHE" firstAttribute="top" secondItem="mij-F6-tQ3" secondAttribute="bottom" constant="8" id="7pQ-5Q-raE"/>
+                            <constraint firstItem="iQr-d4-Ar2" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="8qp-4k-ywN"/>
+                            <constraint firstItem="mij-F6-tQ3" firstAttribute="top" secondItem="Un0-uJ-Kye" secondAttribute="bottom" constant="8" id="9TW-9H-cwC"/>
+                            <constraint firstItem="iQr-d4-Ar2" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="9hT-Pl-9vo"/>
+                            <constraint firstAttribute="centerX" secondItem="AIk-2d-SsO" secondAttribute="centerX" id="EcQ-1H-k5P"/>
+                            <constraint firstItem="iQr-d4-Ar2" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailing" id="GCv-eZ-Lr1"/>
+                            <constraint firstItem="Un0-uJ-Kye" firstAttribute="centerY" secondItem="CGV-m3-SBW" secondAttribute="centerY" id="J0O-mX-8rb"/>
+                            <constraint firstItem="Un0-uJ-Kye" firstAttribute="height" secondItem="CGV-m3-SBW" secondAttribute="height" id="N4l-R0-Ocf"/>
+                            <constraint firstItem="AIk-2d-SsO" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="40" id="P83-js-hnX"/>
+                            <constraint firstItem="Un0-uJ-Kye" firstAttribute="leading" secondItem="AIk-2d-SsO" secondAttribute="leading" id="VZy-Re-rXz"/>
+                            <constraint firstItem="AxI-jd-OVb" firstAttribute="top" secondItem="PoS-mc-yHE" secondAttribute="bottom" constant="8" id="WGH-ty-E9h"/>
+                            <constraint firstItem="Un0-uJ-Kye" firstAttribute="top" secondItem="AIk-2d-SsO" secondAttribute="bottom" constant="8" id="YIg-JB-cmr"/>
+                            <constraint firstItem="mij-F6-tQ3" firstAttribute="height" secondItem="IZI-h9-1Ys" secondAttribute="height" id="bMI-jm-juF"/>
+                            <constraint firstItem="CGV-m3-SBW" firstAttribute="leading" secondItem="Un0-uJ-Kye" secondAttribute="trailing" constant="30" id="crq-6o-U9j"/>
+                            <constraint firstItem="mij-F6-tQ3" firstAttribute="width" secondItem="IZI-h9-1Ys" secondAttribute="width" id="eib-lr-ewY"/>
+                            <constraint firstItem="IZI-h9-1Ys" firstAttribute="leading" secondItem="mij-F6-tQ3" secondAttribute="trailing" constant="30" id="ely-HD-EHA"/>
+                            <constraint firstItem="Un0-uJ-Kye" firstAttribute="width" secondItem="CGV-m3-SBW" secondAttribute="width" id="gFe-94-QGh"/>
+                            <constraint firstItem="PoS-mc-yHE" firstAttribute="trailing" secondItem="IZI-h9-1Ys" secondAttribute="trailing" id="lYl-WC-9wH"/>
+                            <constraint firstItem="AxI-jd-OVb" firstAttribute="height" secondItem="PoS-mc-yHE" secondAttribute="height" id="m4o-7n-8jO"/>
+                            <constraint firstItem="IZI-h9-1Ys" firstAttribute="trailing" secondItem="CGV-m3-SBW" secondAttribute="trailing" id="mcz-vE-Csx"/>
+                            <constraint firstItem="mij-F6-tQ3" firstAttribute="leading" secondItem="PoS-mc-yHE" secondAttribute="leading" id="qhO-hE-Ev1"/>
+                            <constraint firstItem="mij-F6-tQ3" firstAttribute="centerY" secondItem="IZI-h9-1Ys" secondAttribute="centerY" id="ssW-zW-19X"/>
+                            <constraint firstItem="mij-F6-tQ3" firstAttribute="leading" secondItem="Un0-uJ-Kye" secondAttribute="leading" id="tW7-Tz-yfB"/>
+                            <constraint firstItem="CGV-m3-SBW" firstAttribute="trailing" secondItem="AIk-2d-SsO" secondAttribute="trailing" id="vRL-ME-Jb2"/>
+                            <constraint firstItem="AxI-jd-OVb" firstAttribute="trailing" secondItem="PoS-mc-yHE" secondAttribute="trailing" id="wNF-2z-sCb"/>
+                            <constraint firstItem="PoS-mc-yHE" firstAttribute="height" secondItem="AIk-2d-SsO" secondAttribute="height" id="xfG-VY-9td"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Interface Builder" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="redButton" destination="Un0-uJ-Kye" id="0ql-NU-gcx"/>
+                        <outlet property="toggleButton" destination="PoS-mc-yHE" id="wHi-m0-ZLu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3042" y="672"/>
+        </scene>
+        <!--Second View Controller - Programatic-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="RDMBorderedButton" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ej5-n5-O85">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="44"/>
+                                <items>
+                                    <navigationItem id="WaP-O7-m87"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ej5-n5-O85" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailing" id="C9p-N0-R4o"/>
+                            <constraint firstItem="ej5-n5-O85" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="ZQW-8Y-bT4"/>
+                            <constraint firstItem="ej5-n5-O85" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="dYc-7R-70W"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Programatic" image="second" id="cPa-gy-q4n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3042" y="1284"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2283" y="965"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>
