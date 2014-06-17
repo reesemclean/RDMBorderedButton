@@ -10,7 +10,7 @@ import UIKit
 
 class BorderedButton: UIButton {
     
-    var shouldAdjustCornerRadiusBasedOnFrame: Bool {
+    @IBInspectable var shouldAdjustCornerRadiusBasedOnFrame: Bool {
     didSet {
         if (shouldAdjustCornerRadiusBasedOnFrame) {
             self.adjustCornerRadiusBasedOnFrame()
@@ -18,7 +18,7 @@ class BorderedButton: UIButton {
     }
     }
     
-    var cornerRadiusRatioToSmallestSide: Float {
+    @IBInspectable var cornerRadiusRatioToSmallestSide: Float {
     didSet {
         if (shouldAdjustCornerRadiusBasedOnFrame) {
             self.adjustCornerRadiusBasedOnFrame()
@@ -26,14 +26,18 @@ class BorderedButton: UIButton {
     }
     }
     
-    var cornerRadius: CGFloat {
-    didSet {
-        self.layer.cornerRadius = cornerRadius
+    //We should not set corner radius ourselves, instead we should set the layer's corner radius — this setter is exclusively for outside callers.
+    @IBInspectable var cornerRadius: CGFloat {
+    get {
+        return self.layer.cornerRadius
+    }
+    set {
+        self.shouldAdjustCornerRadiusBasedOnFrame = false
+        self.layer.cornerRadius = newValue
     }
     }
     
     init(coder aDecoder: NSCoder!)  {
-        self.cornerRadius = 0
         self.shouldAdjustCornerRadiusBasedOnFrame = true
         self.cornerRadiusRatioToSmallestSide = 1.0/6.0
         
@@ -49,7 +53,6 @@ class BorderedButton: UIButton {
     }
     
     init(frame: CGRect) {
-        self.cornerRadius = 0
         self.shouldAdjustCornerRadiusBasedOnFrame = true
         self.cornerRadiusRatioToSmallestSide = 1.0/6.0
         
@@ -74,34 +77,21 @@ class BorderedButton: UIButton {
     override func tintColorDidChange()  {
         super.tintColorDidChange()
         self.setTitleColor(self.tintColor, forState: UIControlState.Normal)
-        println(self.tintColor)
         self.updateBorderAndFill()
     }
     
     override func setTitleColor(color: UIColor!, forState state: UIControlState) {
-        if (self.titleColorForState(state) == color) {
+        if (self.titleColorForState(state).isEqual(color) ) {
             return;
         }
         
         super.setTitleColor(color, forState: state)
         
-        //Why do I need to use value here?
-        if (state.value == UIControlState.Normal.value) {
+        if (UIControlState.Normal.value == state.value && !self.tintColor.isEqual(color)) {
             self.tintColor = color
         }
         
         self.updateBorderAndFill()
-    }
-    
-    override var tintColor: UIColor! {
-    didSet {
-        if (oldValue == tintColor) {
-            return
-        }
-        
-        self.setTitleColor(tintColor, forState: UIControlState.Normal)
-        self.updateBorderAndFill()
-    }
     }
     
     override var enabled:Bool {
@@ -122,14 +112,12 @@ class BorderedButton: UIButton {
     }
     
     func updateBorderAndFill () {
-        self.layer.borderColor = self.enabled ? self.tintColor.CGColor : self.titleColorForState(UIControlState.Disabled).CGColor;
-        self.backgroundColor = self.highlighted ? self.tintColor : UIColor.clearColor()
+        self.layer.borderColor = self.enabled ? self.titleColorForState(UIControlState.Normal).CGColor : self.titleColorForState(UIControlState.Disabled).CGColor;
+        self.backgroundColor = self.highlighted ? self.titleColorForState(UIControlState.Normal) : UIColor.clearColor()
     }
 
     func adjustCornerRadiusBasedOnFrame() {
-        self.cornerRadius = roundf(min(CGRectGetWidth(self.frame), CGRectGetHeight(self.frame)) * self.cornerRadiusRatioToSmallestSide)
+        self.layer.cornerRadius = roundf(min(CGRectGetWidth(self.frame), CGRectGetHeight(self.frame)) * self.cornerRadiusRatioToSmallestSide)
     }
-    
-    
 
 }

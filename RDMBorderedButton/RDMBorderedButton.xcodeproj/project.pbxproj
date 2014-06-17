@@ -13,7 +13,7 @@
 		C8B65DB0194E6BBF00246BF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8B65DAE194E6BBF00246BF1 /* Main.storyboard */; };
 		C8B65DB2194E6BBF00246BF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8B65DB1194E6BBF00246BF1 /* Images.xcassets */; };
 		C8B65DBE194E6BBF00246BF1 /* RDMBorderedButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B65DBD194E6BBF00246BF1 /* RDMBorderedButtonTests.swift */; };
-		C8B65DC8194E6E2900246BF1 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B65DC7194E6E2900246BF1 /* BorderedButton.swift */; };
+		C8E8988A1950BFE700EA046C /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B65DC7194E6E2900246BF1 /* BorderedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +24,41 @@
 			remoteGlobalIDString = C8B65DA2194E6BBF00246BF1;
 			remoteInfo = RDMBorderedButton;
 		};
+		C8E8988B1950C02A00EA046C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8B65D9B194E6BBF00246BF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8B65DA2194E6BBF00246BF1;
+			remoteInfo = RDMBorderedButton;
+		};
+		C8E8988D1950C02B00EA046C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8B65D9B194E6BBF00246BF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8B65DA2194E6BBF00246BF1;
+			remoteInfo = RDMBorderedButton;
+		};
+		C8E898BB1950C04400EA046C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8B65D9B194E6BBF00246BF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8B65DA2194E6BBF00246BF1;
+			remoteInfo = RDMBorderedButton;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C8E898871950BECD00EA046C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C8B65DA3194E6BBF00246BF1 /* RDMBorderedButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RDMBorderedButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +72,10 @@
 		C8B65DBC194E6BBF00246BF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8B65DBD194E6BBF00246BF1 /* RDMBorderedButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDMBorderedButtonTests.swift; sourceTree = "<group>"; };
 		C8B65DC7194E6E2900246BF1 /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
+		C8E898971950C03800EA046C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8E898981950C03800EA046C /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		C8E898A41950C03800EA046C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8E898A51950C03800EA046C /* TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +101,8 @@
 			children = (
 				C8B65DA5194E6BBF00246BF1 /* RDMBorderedButton */,
 				C8B65DBA194E6BBF00246BF1 /* RDMBorderedButtonTests */,
+				C8E898951950C03800EA046C /* Test */,
+				C8E898A21950C03800EA046C /* TestTests */,
 				C8B65DA4194E6BBF00246BF1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,6 +155,40 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C8E898951950C03800EA046C /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				C8E898981950C03800EA046C /* Test.h */,
+				C8E898961950C03800EA046C /* Supporting Files */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		C8E898961950C03800EA046C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C8E898971950C03800EA046C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C8E898A21950C03800EA046C /* TestTests */ = {
+			isa = PBXGroup;
+			children = (
+				C8E898A51950C03800EA046C /* TestTests.swift */,
+				C8E898A31950C03800EA046C /* Supporting Files */,
+			);
+			path = TestTests;
+			sourceTree = "<group>";
+		};
+		C8E898A31950C03800EA046C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C8E898A41950C03800EA046C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,6 +199,7 @@
 				C8B65D9F194E6BBF00246BF1 /* Sources */,
 				C8B65DA0194E6BBF00246BF1 /* Frameworks */,
 				C8B65DA1194E6BBF00246BF1 /* Resources */,
+				C8E898871950BECD00EA046C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -147,6 +222,9 @@
 			);
 			dependencies = (
 				C8B65DB9194E6BBF00246BF1 /* PBXTargetDependency */,
+				C8E8988C1950C02A00EA046C /* PBXTargetDependency */,
+				C8E8988E1950C02B00EA046C /* PBXTargetDependency */,
+				C8E898BC1950C04400EA046C /* PBXTargetDependency */,
 			);
 			name = RDMBorderedButtonTests;
 			productName = RDMBorderedButtonTests;
@@ -216,7 +294,7 @@
 			files = (
 				C8B65DAD194E6BBF00246BF1 /* SecondViewController.swift in Sources */,
 				C8B65DA9194E6BBF00246BF1 /* AppDelegate.swift in Sources */,
-				C8B65DC8194E6E2900246BF1 /* BorderedButton.swift in Sources */,
+				C8E8988A1950BFE700EA046C /* BorderedButton.swift in Sources */,
 				C8B65DAB194E6BBF00246BF1 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,6 +314,21 @@
 			isa = PBXTargetDependency;
 			target = C8B65DA2194E6BBF00246BF1 /* RDMBorderedButton */;
 			targetProxy = C8B65DB8194E6BBF00246BF1 /* PBXContainerItemProxy */;
+		};
+		C8E8988C1950C02A00EA046C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C8B65DA2194E6BBF00246BF1 /* RDMBorderedButton */;
+			targetProxy = C8E8988B1950C02A00EA046C /* PBXContainerItemProxy */;
+		};
+		C8E8988E1950C02B00EA046C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C8B65DA2194E6BBF00246BF1 /* RDMBorderedButton */;
+			targetProxy = C8E8988D1950C02B00EA046C /* PBXContainerItemProxy */;
+		};
+		C8E898BC1950C04400EA046C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C8B65DA2194E6BBF00246BF1 /* RDMBorderedButton */;
+			targetProxy = C8E898BB1950C04400EA046C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -407,6 +500,7 @@
 				C8B65DC3194E6BBF00246BF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C8B65DC4194E6BBF00246BF1 /* Build configuration list for PBXNativeTarget "RDMBorderedButtonTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +509,7 @@
 				C8B65DC6194E6BBF00246BF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
