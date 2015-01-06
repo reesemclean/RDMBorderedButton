@@ -32,7 +32,7 @@
 }
 
 -(void) commonSetup {
-    
+    NSAssert(self.buttonType == UIButtonTypeCustom, @"RDMBorderedButton's type must be set to custom.");
     [self setTitleColor:self.tintColor forState:UIControlStateNormal];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
