@@ -43,12 +43,29 @@
 - (IBAction)showAlertButtonPushed:(id)sender {
     
     [self.toggleRedButtonButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Alert!"
-                                                        message:@"Notice that the button borders desaturate as they should."
-                                                       delegate:nil
-                                              cancelButtonTitle:nil
-                                              otherButtonTitles:@"Nice!", nil];
-    [alertView show];
+    
+    NSString *title = @"Alert!";
+    NSString *message = @"Notice that the button borders desaturate as they should.";
+    NSString *buttonTitle = @"Nice!";
+    
+    if ([UIAlertController class]) {
+        
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:buttonTitle style:UIAlertActionStyleDefault handler:nil];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:okAction];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+    } else {
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle: title
+                                                            message:message
+                                                           delegate:nil
+                                                  cancelButtonTitle:nil
+                                                  otherButtonTitles:buttonTitle, nil];
+        [alertView show];
+        
+    }
     
 }
 - (IBAction)toggleRedButtonPushed:(id)sender {
