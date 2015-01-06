@@ -32,14 +32,16 @@
 }
 
 -(void) commonSetup {
+    
     NSAssert(self.buttonType == UIButtonTypeCustom, @"RDMBorderedButton's type must be set to custom.");
+    
     [self setTitleColor:self.tintColor forState:UIControlStateNormal];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
     [self setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     
     _adjustsCornerRadiusBasedOnFrame = YES;
-    _cornerRadiusRatioToSmallestSide = (1.0f / 6.0f);
+    _cornerRadiusRatioToSmallestSide = 1.0 / 6.0;
     [self adjustCornerRadius];
         
     self.layer.cornerRadius = _cornerRadius;
