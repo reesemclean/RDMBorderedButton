@@ -26,9 +26,6 @@
 -(id) initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        
-        NSAssert(self.buttonType == UIButtonTypeCustom, @"RDMBorderedButton's created in interface builder must be set to type custom.");
-        
         [self commonSetup];
     }
     return self;
@@ -38,10 +35,11 @@
     
     [self setTitleColor:self.tintColor forState:UIControlStateNormal];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    [self setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
     [self setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     
     _adjustsCornerRadiusBasedOnFrame = YES;
-    _cornerRadiusRatioToSmallestSide = 1.0/6.0;
+    _cornerRadiusRatioToSmallestSide = (1.0f / 6.0f);
     [self adjustCornerRadius];
         
     self.layer.cornerRadius = _cornerRadius;
@@ -99,34 +97,49 @@
     self.layer.cornerRadius = _cornerRadius;
 }
 
--(void) setEnabled:(BOOL)enabled {
-
+- (void)setEnabled:(BOOL)enabled
+{
     [super setEnabled:enabled];
     [self updateBorderAndFill];
-    
 }
 
--(void) updateBorderAndFill {
+- (void)updateBorderAndFill
+{
     self.layer.borderColor = self.enabled ? self.tintColor.CGColor : [self titleColorForState:UIControlStateDisabled].CGColor;
-    self.backgroundColor = self.highlighted ? self.tintColor : [UIColor clearColor];
+    self.imageView.tintColor = (self.highlighted || self.selected) ? [UIColor whiteColor] : self.tintColor;
+    self.backgroundColor = (self.highlighted || self.selected) ? self.tintColor : [UIColor clearColor];
 }
 
--(void) setHighlighted:(BOOL)highlighted {
-    
+- (void)setHighlighted:(BOOL)highlighted
+{
     if (self.highlighted == highlighted) {
         return;
     }
-    
+
     [super setHighlighted:highlighted];
-    
     [UIView animateWithDuration:0.2f
                           delay:0.0f
                         options:UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
-                         self.backgroundColor = highlighted ? self.tintColor : [UIColor clearColor];
+                         [self updateBorderAndFill];
                      }
                      completion:nil];
-    
+}
+
+- (void)setSelected:(BOOL)selected
+{
+    if (self.selected == selected) {
+        return;
+    }
+
+    [super setSelected:selected];
+    [UIView animateWithDuration:0.2f
+                          delay:0.0f
+                        options:UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionBeginFromCurrentState
+                     animations:^{
+                         [self updateBorderAndFill];
+                     }
+                     completion:nil];
 }
 
 @end
