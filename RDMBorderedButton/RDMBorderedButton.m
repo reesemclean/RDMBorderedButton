@@ -45,7 +45,7 @@
     [self adjustCornerRadius];
         
     self.layer.cornerRadius = _cornerRadius;
-    self.layer.borderWidth = 1.0;
+    self.layer.borderWidth = _borderWidth;
     self.layer.borderColor = self.tintColor.CGColor;
 }
 
@@ -97,6 +97,11 @@
     self.adjustsCornerRadiusBasedOnFrame = NO;
     _cornerRadius = cornerRadius;
     self.layer.cornerRadius = _cornerRadius;
+}
+
+-(void) setBorderWidth:(CGFloat)borderWidth {
+    _borderWidth = borderWidth;
+    self.layer.borderWidth = _borderWidth;
 }
 
 - (void)setEnabled:(BOOL)enabled
