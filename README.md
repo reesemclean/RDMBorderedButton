@@ -8,7 +8,7 @@ A subclass of UIButton that adds a border.
 
 In code: Use initWithFrame to create a button and add to a subview.
 
-Interface Builder: Add a button as usual. Set the class to RDMBorderedButton — there are some bugs with iOS 7.1 that require you to set the buttom type to Custom in Interface Builder. Also note that you can use the "User Defined Runtime Attributes" in Interface Builder to set the corner radius (key: "cornerRadius"). The example project shows this with the black and yellow buttons.
+Interface Builder: Add a button as usual. Set the class to RDMBorderedButton — there are some bugs with iOS 7.1 that require you to set the buttom type to Custom in Interface Builder. All properties can be adjusted using Attributes Inspector. The example project shows this with the black and yellow buttons.
 
 ###Corner Radius
 
@@ -25,7 +25,13 @@ Note that changes to Corner Radius will not be animated. If you would like a cor
 The corner radius can be adjusted manually (this turns off automatic adjustments):
 
 	//This will forward the cornerRadius to the button's layer and turn off automatic adjustments
-	button.cornerRadius = 6.0; 
+	button.cornerRadius = 6.0;
+
+###Border Width
+
+The border width of the button can be adjusted programmatically:
+
+    button.borderWidth = 2.0;
 
 ###Color
 
